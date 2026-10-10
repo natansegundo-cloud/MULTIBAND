@@ -1,0 +1,54 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #1d2430;
+  background: #eef1f5;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, select, input { font: inherit; }
+
+.app-shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 40px 0 60px; }
+.app-header, .control-row, .section-heading, .sound-controls, .step-monitor { display: flex; gap: 20px; align-items: center; }
+.app-header, .section-heading { justify-content: space-between; }
+.app-header { border-bottom: 1px solid #cbd2dc; padding-bottom: 24px; }
+.eyebrow { margin: 0 0 8px; color: #687386; font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: 8px; font-size: 42px; }
+h2 { margin-bottom: 0; font-size: 24px; }
+.subtitle, .help-text { color: #687386; }
+.transport-status { display: flex; gap: 8px; align-items: center; color: #687386; }
+.status-dot { width: 10px; height: 10px; border-radius: 50%; background: #9ba5b4; }
+.is-playing .status-dot { background: #277a55; }
+.control-row, .sound-controls { flex-wrap: wrap; padding: 24px 0; border-bottom: 1px solid #cbd2dc; }
+label { display: grid; gap: 7px; color: #687386; font-size: 13px; font-weight: 700; }
+select { min-height: 36px; padding: 0 10px; color: #1d2430; background: #fff; border: 1px solid #aeb7c4; border-radius: 5px; }
+input[type="range"] { accent-color: #365f8c; }
+button { cursor: pointer; }
+.transport-button { min-height: 40px; padding: 0 20px; color: #fff; background: #365f8c; border: 0; border-radius: 5px; font-weight: 700; }
+.transport-button:active, .chord-button:active { transform: translateY(1px); }
+.chord-section { padding: 32px 0; }
+.section-heading > span { color: #687386; font-size: 13px; }
+.chord-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-top: 22px; }
+.chord-button { min-height: 130px; padding: 14px 8px; color: #1d2430; background: #fff; border: 1px solid #aeb7c4; border-radius: 6px; text-align: left; transition: border-color .15s, background .15s; }
+.chord-button.is-active { background: #e4edf8; border-color: #365f8c; }
+.chord-button strong, .chord-button small { display: block; }
+.chord-button strong { margin: 22px 0 6px; font-size: 24px; }
+.chord-button small { color: #687386; font-size: 11px; }
+.keyboard-key { color: #365f8c; font-size: 11px; font-weight: 700; }
+.sound-controls { align-items: end; }
+.sound-controls label { min-width: 150px; }
+.step-monitor { justify-content: space-between; padding: 24px 0; }
+.step-monitor strong { font-size: 22px; }
+.step-lights { display: flex; flex-wrap: wrap; gap: 5px; justify-content: end; }
+.step-light { width: 13px; height: 13px; background: #c8d0dc; border-radius: 2px; }
+.step-light.is-on { background: #365f8c; }
+.error-message { padding: 12px; color: #8a2f2f; background: #f8e4e4; border: 1px solid #d7a1a1; }
+.help-text { margin-bottom: 0; font-size: 13px; }
+
+@media (max-width: 720px) {
+  .app-header, .section-heading, .step-monitor { align-items: flex-start; flex-direction: column; }
+  .chord-grid { grid-template-columns: repeat(2, 1fr); }
+  .step-lights { justify-content: start; }
+}

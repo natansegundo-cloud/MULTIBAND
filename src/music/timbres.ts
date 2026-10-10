@@ -1,0 +1,58 @@
+import type { TimbreDefinition, TimbreName } from "./types";
+
+export const TIMBRES: Record<TimbreName, TimbreDefinition> = {
+  piano: {
+    name: "piano",
+    label: "Piano sintético",
+    waveform: "triangle",
+    lowpass: 3400,
+    attack: 0.008,
+    release: 0.2,
+    brightness: 0.8,
+  },
+  organ: {
+    name: "organ",
+    label: "Órgão",
+    waveform: "square",
+    lowpass: 2500,
+    attack: 0.025,
+    release: 0.3,
+    brightness: 0.65,
+  },
+  strings: {
+    name: "strings",
+    label: "Cordas",
+    waveform: "sawtooth",
+    lowpass: 1800,
+    attack: 0.16,
+    release: 0.45,
+    brightness: 0.45,
+  },
+  synth: {
+    name: "synth",
+    label: "Synth",
+    waveform: "sawtooth",
+    lowpass: 4200,
+    attack: 0.02,
+    release: 0.18,
+    brightness: 0.9,
+  },
+  bass: {
+    name: "bass",
+    label: "Baixo",
+    waveform: "triangle",
+    lowpass: 900,
+    attack: 0.01,
+    release: 0.14,
+    brightness: 0.35,
+  },
+  pluck: {
+    name: "pluck",
+    label: "Baixo dedilhado",
+    waveform: "square",
+    lowpass: 1300,
+    attack: 0.004,
+    release: 0.1,
+    brightness: 0.5,
+  },
+};
